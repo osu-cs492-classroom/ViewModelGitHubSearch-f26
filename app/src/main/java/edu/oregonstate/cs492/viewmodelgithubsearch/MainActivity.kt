@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        Log.d("MainActivity", "onCreate()")
+
         val searchBoxET: EditText = findViewById(R.id.et_search_box)
         val searchBtn: Button = findViewById(R.id.btn_search)
 
@@ -84,5 +86,30 @@ class MainActivity : AppCompatActivity() {
                 searchErrorTV.text = getString(R.string.search_error, t.message)
             }
         })
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("MainActivity", "onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("MainActivity", "onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("MainActivity", "onPause()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("MainActivity", "onStop()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("MainActivity", "onDestroy()")
     }
 }
